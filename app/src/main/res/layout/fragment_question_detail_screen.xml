@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.QuestionDetailScreenFragment">
+
+    <TextView
+        android:id="@+id/timer_tv2"
+        style="@style/textStyle.itemView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_top_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="timer" />
+
+    <TextView
+        android:id="@+id/question"
+        style="@style/textStyle.itemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_top_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timer_tv2"
+        tools:text="this is the question" />
+
+    <LinearLayout
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_top_margin"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/question">
+
+        <RadioButton
+            android:id="@+id/radio_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textSize="@dimen/small_text_size"
+            tools:text="@tools:sample/first_names" />
+
+        <RadioButton
+            android:id="@+id/radio_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textSize="20dp"
+            tools:text="@tools:sample/last_names" />
+
+        <RadioButton
+            android:id="@+id/radio_option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textSize="20dp"
+            tools:text="@tools:sample/last_names" />
+
+        <RadioButton
+            android:id="@+id/radio_option4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textSize="20dp"
+            tools:text="@tools:sample/last_names" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/previous_button"
+        style="@style/textStyle.button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_top_margin"
+        android:drawableLeft="@drawable/ic_arrow_back"
+        android:gravity="center"
+        android:text="Previous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+    <Button
+        android:id="@+id/next_button"
+        style="@style/textStyle.button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_top_margin"
+        android:drawableRight="@drawable/ic_arrow_forward"
+        android:gravity="center"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+    <Switch
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_top_margin"
+        android:padding="@dimen/padding2"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size"
+        android:switchPadding="8dp"
+        android:text="Bookmark"
+        app:layout_constraintTop_toBottomOf="@id/previous_button"
+        app:layout_constraintStart_toStartOf="@id/radioGroup"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/submit_button2"
+        style="@style/textStyle.button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_top_margin"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
